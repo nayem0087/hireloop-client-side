@@ -33,6 +33,7 @@ export default function SignupPage() {
                 email,
                 password,
                 name,
+                role,
                 callbackURL: "/",
             });
 
@@ -119,7 +120,7 @@ export default function SignupPage() {
                     {/* Role Selection */}
                     <div className="flex flex-col gap-4">
                         <Label>Subscription plan</Label>
-                        <RadioGroup defaultValue="seeker" name="role" orientation="horizontal">
+                        <RadioGroup defaultValue="seeker" name="role" onChange={(value) => setRole(value)} orientation="horizontal">
                             <Radio value="seeker"> 
                                 <Radio.Control>
                                     <Radio.Indicator />
